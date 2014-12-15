@@ -29,7 +29,7 @@ Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012
 
 ## Column Descriptions
 
-column 1: "subject"      The id of the subject(person) who was wearing the
+**column 1:** *"subject"*      The id of the subject(person) who was wearing the
                          device when the measurements were taken. Ranges 
                          from 1 to 30.
 
