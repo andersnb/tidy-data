@@ -1,5 +1,7 @@
 
 #		Code Book for Wearable Computing Dataset
+Bill Anderson
+15Dec2014
 
 ## Origin of Data
 
