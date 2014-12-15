@@ -43,7 +43,9 @@ column 3: "variable"     The name of the measurement taken. The possible
                          variables are described below.
 
 column 4: "mean(value)"  The mean of the variable measured for the subject 
-                         and activity of the row.
+                         and activity of the row. Note that all values are
+                         normalized to be in the range of -1 to 1 and there
+                         are no units (according to the class TA).
 
 
 ### variable descriptions (column 3)
