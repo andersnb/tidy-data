@@ -27,7 +27,7 @@ This dataset is distributed AS-IS and no responsibility implied or explicit can 
 
 Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012.
 
-
+## Column Descriptions
 
 column 1: "subject"      The id of the subject(person) who was wearing the
                          device when the measurements were taken. Ranges 
@@ -46,8 +46,7 @@ column 4: "mean(value)"  The mean of the variable measured for the subject
                          and activity of the row.
 
 
-variable descriptions (column 3)
---------------------------------
+### variable descriptions (column 3)
 "tBodyAcc-mean()-X"
 	
 	mean acceleration of the body in the X-axis in the time domain
