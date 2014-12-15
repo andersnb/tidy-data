@@ -4,6 +4,9 @@
 # modification history
 # 11Dec2014  Bill Anderson  created
 #
+# to read in data created by this script:
+# df <- read.table("tidy-data.txt", header=TRUE)
+#
 #
 library(dplyr)
 library(reshape2)
@@ -110,4 +113,4 @@ df_summary <- summarize(df_grouped, mean(value))
 #
 # write out the final dataset
 #
-write.table(df_summary, "final-data.txt", row.name=FALSE)
+write.table(df_summary, "tidy-data.txt", row.name=FALSE)
