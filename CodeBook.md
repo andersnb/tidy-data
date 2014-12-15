@@ -27,6 +27,52 @@ This dataset is distributed AS-IS and no responsibility implied or explicit can 
 
 Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012.
 
+## Data Ingest and Transformations
+Below are the steps that were used to read and transform the data.
+
+1. The test data values (contained in "test/X_test.txt") were read in.
+
+2. The test subject ids (contained in "test/subject_test.txt") were read in.
+
+3. The test activity ids (contained in "test/y_test.txt") were read in.
+
+4. The test data, subject, and activity values were combined using the R
+   cbind function.
+
+5. The training data values (contained in "train/X_train.txt") were read in.
+
+6. The training subject ids (contained in "train/subject_train.txt") were
+   read in.
+
+7. The training activity ids (contained in "train/y_train.txt") were read in.
+
+8. The training data, subject, and activity values were combined using the
+   R cbind function.
+
+9. The test and training data frames were combined using the R rbind
+   function.
+
+10. Only the mean and standard deviation variables were kept from the 
+    combined data frame.  I chose the variables that had the word "mean"
+    in them and that also had an associated standard deviation plus the
+    standard deviation values themselves.
+    
+11. Next, the activity ids were replaced with their character labels using
+    the R sub function.
+
+12. Then, the column/variable names were renamed to be more descriptive.
+
+13. Next, the data was reshaped by melting the variables into two columns
+    (the variable name and the variable value) to create a long tidy data
+    set per Hadley Wickham's paper on tidy data.
+
+14. Then, the data was grouped by subject and activity and the mean of
+    all the combinations of subject, activity, and variable, was calculated
+    using the summarize function.
+
+15. Finally, the data was written out using the write.table function.
+    
+
 ## Column Descriptions
 
 **column 1:** *"subject"*      The id of the subject(person) who was wearing the
@@ -48,7 +94,7 @@ Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012
                          are no units (according to the class TA).
 
 
-### variable descriptions (column 3)
+### Variable Descriptions (column 3)
 "tBodyAcc-mean()-X"
 	
 	mean acceleration of the body in the X-axis in the time domain
