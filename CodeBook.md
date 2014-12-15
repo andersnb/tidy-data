@@ -33,16 +33,16 @@ Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012
                          device when the measurements were taken. Ranges 
                          from 1 to 30.
 
-column 2: "activity"     The name of activity performed by the subject. One of
+**column 2:** *"activity"*     The name of activity performed by the subject. One of
                          the following six labels: "WALKING
 "
                          "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", 
                          "STANDING", "LAYING".
 
-column 3: "variable"     The name of the measurement taken. The possible 
+**column 3:** *"variable"*     The name of the measurement taken. The possible 
                          variables are described below.
 
-column 4: "mean(value)"  The mean of the variable measured for the subject 
+**column 4:** *"mean(value)"*  The mean of the variable measured for the subject 
                          and activity of the row. Note that all values are
                          normalized to be in the range of -1 to 1 and there
                          are no units (according to the class TA).
