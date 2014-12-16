@@ -340,27 +340,27 @@ df <- read.table("tidy-data.txt", header=TRUE)
 
         standard deviation of the magnitude of the acceleration of the body in the frequency domain
 
-"freqBodyBodyAccJerkMagMean"
+"freqBodyAccJerkMagMean"
 
         mean of the magnitude of the jerk acceleration of the body in the frequency domain
 
-"freqBodyBodyAccJerkMagStd"
+"freqBodyAccJerkMagStd"
 
         standard deviation of the magnitude of the jerk acceleration of the body in the frequency domain
 
-"freqBodyBodyGyroMagMean"
+"freqBodyGyroMagMean"
 
         mean of the magnitude of the angular velocity of the body in the frequency domain
 
-"freqBodyBodyGyroMagStd"
+"freqBodyGyroMagStd"
 
         standard deviation of the magnitude of the angular velocity of the body in the frequency domain
 
-"freqBodyBodyGyroJerkMagMean"
+"freqBodyGyroJerkMagMean"
 
         mean of the magnitude of the jerk angular velocity of the body in the frequency domain
 
-"freqBodyBodyGyroJerkMagStd"
+"freqBodyGyroJerkMagStd"
 
         standard deviation of the magnitude of the jerk angular velocity of the body in the frequency domain
 
