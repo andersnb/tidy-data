@@ -28,7 +28,7 @@ This dataset is distributed AS-IS and no responsibility implied or explicit can 
 Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012.
 
 ## Data Ingest and Transformations
-Below are the steps that were used to read and transform the data.
+Below are the steps that were used to read and transform the original data.
 
 1. The test data values (contained in "test/X_test.txt") were read in.
 
