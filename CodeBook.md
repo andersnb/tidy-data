@@ -37,7 +37,7 @@ Below are the steps that were used to read and transform the data.
 3. The test activity ids (contained in "test/y_test.txt") were read in.
 
 4. The test data, subject, and activity values were combined using the R
-   cbind function.
+   *cbind* function.
 
 5. The training data values (contained in "train/X_train.txt") were read in.
 
@@ -47,9 +47,9 @@ Below are the steps that were used to read and transform the data.
 7. The training activity ids (contained in "train/y_train.txt") were read in.
 
 8. The training data, subject, and activity values were combined using the
-   R cbind function.
+   R *cbind* function.
 
-9. The test and training data frames were combined using the R rbind
+9. The test and training data frames were combined using the R *rbind*
    function.
 
 10. Only the mean and standard deviation variables were kept from the 
@@ -58,20 +58,24 @@ Below are the steps that were used to read and transform the data.
     standard deviation values themselves.
     
 11. Next, the activity ids were replaced with their character labels using
-    the R sub function.
+    the R *sub* function.
 
 12. Then, the column/variable names were renamed to be more descriptive.
 
 13. Next, the data was reshaped by melting the variables into two columns
     (the variable name and the variable value) to create a long tidy data
-    set per Hadley Wickham's paper on tidy data.
+    set per Hadley Wickham's paper on tidy data(**http://vita.had.co.nz/papers/tidy-data.pdf**).
 
 14. Then, the data was grouped by subject and activity and the mean of
-    all the combinations of subject, activity, and variable, was calculated
-    using the summarize function.
+    all the combinations of subject, activity, and variable, were calculated
+    using the *summarize* function.
 
-15. Finally, the data was written out using the write.table function.
+15. Finally, the data was written out using the *write.table* function.
     
+## Reading in the Data
+The following R command can be used to read in the tidy dataset to a data frame:
+
+df <- read.table("tidy-data.txt", header=TRUE)
 
 ## Column Descriptions
 
@@ -79,8 +83,7 @@ Below are the steps that were used to read and transform the data.
                          device when the measurements were taken. Ranges 
                          from 1 to 30.
 
-**column 2:** *"activity"*     The name of activity performed by the subject. One of
-                         the following six labels: "WALKING
+**column 2:** *"activity"*     The name of the activity performed by the subject. Contains one of the following six labels: "WALKING
 "
                          "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", 
                          "STANDING", "LAYING".
@@ -95,6 +98,8 @@ Below are the steps that were used to read and transform the data.
 
 
 ### Variable Descriptions (column 3)
+**Note: In the original dataset, all values were normalized to be in the range of -1 to 1 and there are no units (according to the class TA).**
+
 "tBodyAcc-mean()-X"
 	
 	mean acceleration of the body in the X-axis in the time domain
@@ -109,18 +114,15 @@ Below are the steps that were used to read and transform the data.
 
 "tBodyAcc-std()-X"
 	
-	standard deviation of the acceleration of the body in the X-axis
-        in the time domain
+	standard deviation of the acceleration of the body in the X-axis in the time domain
 
 "tBodyAcc-std()-Y"
 	
-	standard deviation of the acceleration of the body in the Y-axis
-        in the time domain
+	standard deviation of the acceleration of the body in the Y-axis in the time domain
 
 "tBodyAcc-std()-Z"
 	
-	standard deviation of the acceleration of the body in the Z-axis
-        in the time domain
+	standard deviation of the acceleration of the body in the Z-axis in the time domain
 
 "tGravityAcc-mean()-X"
 	
@@ -136,18 +138,15 @@ Below are the steps that were used to read and transform the data.
 
 "tGravityAcc-std()-X"
 	
-	standard deviation of acceleration due to gravity in the X-axis
-        in the time domain
+	standard deviation of acceleration due to gravity in the X-axis in the time domain
 
 "tGravityAcc-std()-Y"
 	
-	standard deviation of acceleration due to gravity in the Y-axis
-        in the time domain
+	standard deviation of acceleration due to gravity in the Y-axis in the time domain
 
 "tGravityAcc-std()-Z"
 	
-	standard deviation of acceleration due to gravity in the Z-axis
-        in the time domain
+	standard deviation of acceleration due to gravity in the Z-axis in the time domain
 
 "tBodyAccJerk-mean()-X"
 	
@@ -163,18 +162,15 @@ Below are the steps that were used to read and transform the data.
 
 "tBodyAccJerk-std()-X"
 	
-	standard deviation of jerk acceleration of the body in the X-axis
-        in the time domain
+	standard deviation of jerk acceleration of the body in the X-axis in the time domain
 
 "tBodyAccJerk-std()-Y"
 	
-	standard deviation of jerk acceleration of the body in the Y-axis
-        in the time domain
+	standard deviation of jerk acceleration of the body in the Y-axis in the time domain
 
 "tBodyAccJerk-std()-Z"
 	
-	standard deviation of jerk acceleration of the body in the Z-axis
-        in the time domain
+	standard deviation of jerk acceleration of the body in the Z-axis in the time domain
 
 "tBodyGyro-mean()-X"
 
@@ -190,98 +186,79 @@ Below are the steps that were used to read and transform the data.
 
 "tBodyGyro-std()-X"
 
-	standard deviation of the angular velocity of the body in the X-axis
-        in the time domain
+	standard deviation of the angular velocity of the body in the X-axis in the time domain
 
 "tBodyGyro-std()-Y"
 
-	standard deviation of the angular velocity of the body in the Y-axis
-        in the time domain
+	standard deviation of the angular velocity of the body in the Y-axis in the time domain
 
 "tBodyGyro-std()-Z"
 
-	standard deviation of the angular velocity of the body in the Z-axis
-        in the time domain
+	standard deviation of the angular velocity of the body in the Z-axis in the time domain
 
 "tBodyGyroJerk-mean()-X"
 
-	mean jerk angular velocity of the body in the X-axis in the time
-        domain
+	mean jerk angular velocity of the body in the X-axis in the time domain
 
 "tBodyGyroJerk-mean()-Y"
 
-	mean jerk angular velocity of the body in the Y-axis in the time
-        domain
+	mean jerk angular velocity of the body in the Y-axis in the time domain
 
 "tBodyGyroJerk-mean()-Z"
 
-	mean jerk angular velocity of the body in the Z-axis in the time
-        domain
+	mean jerk angular velocity of the body in the Z-axis in the time domain
 
 "tBodyGyroJerk-std()-X"
 
-	standard deviation of the jerk angular velocity of the body in the 
-        X-axis in the time domain
+	standard deviation of the jerk angular velocity of the body in the X-axis in the time domain
 
 "tBodyGyroJerk-std()-Y"
 
-	standard deviation of the jerk angular velocity of the body in the 
-        Y-axis in the time domain
+	standard deviation of the jerk angular velocity of the body in the Y-axis in the time domain
 
 "tBodyGyroJerk-std()-Z"
 
-	standard deviation of the jerk angular velocity of the body in the 
-        Z-axis in the time domain
+	standard deviation of the jerk angular velocity of the body in the Z-axis in the time domain
 
 "tBodyAccMag-mean()"
 
-	mean of the magnitude of the acceleration of the body in the time
-        domain
+	mean of the magnitude of the acceleration of the body in the time domain
 
 "tBodyAccMag-std()"
 
-	standard deviation of the magnitude of the acceleration of the body
-        in the time domain
+	standard deviation of the magnitude of the acceleration of the body in the time domain
 
 "tGravityAccMag-mean()"
 
-	mean of the magnitude of the acceleration of gravity in the time
-        domain
+	mean of the magnitude of the acceleration of gravity in the time domain
 
 "tGravityAccMag-std()"
 
-	standard deviation of the magnitude of the acceleration of gravity
-        in the time domain
+	standard deviation of the magnitude of the acceleration of gravity in the time domain
 
 "tBodyAccJerkMag-mean()"
 
-	mean of the magnitude of the jerk acceleration of the body in the
-        time domain
+	mean of the magnitude of the jerk acceleration of the body in the time domain
 
 "tBodyAccJerkMag-std()"
 
-	standard deviation of the magnitude of the jerk acceleration of the 
-        body in the time domain
+	standard deviation of the magnitude of the jerk acceleration of the body in the time domain
 
 "tBodyGyroMag-mean()"
 
-	mean of the magnitude of the angular velocity of the body in the
-        time domain
+	mean of the magnitude of the angular velocity of the body in the time domain
 
 "tBodyGyroMag-std()"
 
-	standard deviation of the magnitude of the angular velocity of the 
-        body in the time domain
+	standard deviation of the magnitude of the angular velocity of the body in the time domain
 
 "tBodyGyroJerkMag-mean()"
 
-	mean of the magnitude of the jerk angular velocity of the body in the
-        time domain
+	mean of the magnitude of the jerk angular velocity of the body in the time domain
 
 "tBodyGyroJerkMag-std()"
 
-	standard deviation of the magnitude of the jerk angular velocity of 
-        the body in the time domain
+	standard deviation of the magnitude of the jerk angular velocity of the body in the time domain
 
 "fBodyAcc-mean()-X"
        
@@ -297,116 +274,93 @@ Below are the steps that were used to read and transform the data.
 
 "fBodyAcc-std()-X"
        
-        standard deviation of the acceleration of the body in the X-axis
-        in the frequency domain
+        standard deviation of the acceleration of the body in the X-axis in the frequency domain
 
 "fBodyAcc-std()-Y"
        
-        standard deviation of the acceleration of the body in the Y-axis
-        in the frequency domain
+        standard deviation of the acceleration of the body in the Y-axis in the frequency domain
 
 "fBodyAcc-std()-Z"
        
-        standard deviation of the acceleration of the body in the Z-axis
-        in the frequency domain
+        standard deviation of the acceleration of the body in the Z-axis in the frequency domain
 
 "fBodyAccJerk-mean()-X"
        
-        mean jerk acceleration of the body in the X-axis in the frequency 
-        domain
+        mean jerk acceleration of the body in the X-axis in the frequency domain
 
 "fBodyAccJerk-mean()-Y"
        
-        mean jerk acceleration of the body in the Y-axis in the frequency 
-        domain
+        mean jerk acceleration of the body in the Y-axis in the frequency domain
 
 "fBodyAccJerk-mean()-Z"
        
-        mean jerk acceleration of the body in the Z-axis in the frequency 
-        domain
+        mean jerk acceleration of the body in the Z-axis in the frequency domain
 
 "fBodyAccJerk-std()-X"
         
-        standard deviation of jerk acceleration of the body in the X-axis
-        in the frequency domain
+        standard deviation of jerk acceleration of the body in the X-axis in the frequency domain
 
 "fBodyAccJerk-std()-Y"
         
-        standard deviation of jerk acceleration of the body in the Y-axis
-        in the frequency domain
+        standard deviation of jerk acceleration of the body in the Y-axis in the frequency domain
 
 "fBodyAccJerk-std()-Z"
         
-        standard deviation of jerk acceleration of the body in the Z-axis
-        in the frequency domain
+        standard deviation of jerk acceleration of the body in the Z-axis in the frequency domain
 
 "fBodyGyro-mean()-X"
 
-        mean angular velocity of the body in the X-axis in the frequency 
-        domain
+        mean angular velocity of the body in the X-axis in the frequency domain
 
 "fBodyGyro-mean()-Y"
 
-        mean angular velocity of the body in the Y-axis in the frequency 
-        domain
+        mean angular velocity of the body in the Y-axis in the frequency domain
 
 "fBodyGyro-mean()-Z"
 
-        mean angular velocity of the body in the Z-axis in the frequency 
-        domain
+        mean angular velocity of the body in the Z-axis in the frequency domain
 
 "fBodyGyro-std()-X"
 
-        standard deviation of the angular velocity of the body in the X-axis
-        in the frequency domain
+        standard deviation of the angular velocity of the body in the X-axis in the frequency domain
 
 "fBodyGyro-std()-Y"
 
-        standard deviation of the angular velocity of the body in the Y-axis
-        in the frequency domain
+        standard deviation of the angular velocity of the body in the Y-axis in the frequency domain
 
 "fBodyGyro-std()-Z"
 
-        standard deviation of the angular velocity of the body in the Z-axis
-        in the frequency domain
+        standard deviation of the angular velocity of the body in the Z-axis in the frequency domain
 
 "fBodyAccMag-mean()"
 
-        mean of the magnitude of the acceleration of the body in the frequency
-        domain
+        mean of the magnitude of the acceleration of the body in the frequency domain
 
 "fBodyAccMag-std()"
 
-        standard deviation of the magnitude of the acceleration of the body
-        in the frequency domain
+        standard deviation of the magnitude of the acceleration of the body in the frequency domain
 
 "fBodyBodyAccJerkMag-mean()"
 
-        mean of the magnitude of the jerk acceleration of the body in the
-        frequency domain
+        mean of the magnitude of the jerk acceleration of the body in the frequency domain
 
 "fBodyBodyAccJerkMag-std()"
 
-        standard deviation of the magnitude of the jerk acceleration of the 
-        body in the frequency domain
+        standard deviation of the magnitude of the jerk acceleration of the body in the frequency domain
 
 "fBodyBodyGyroMag-mean()"
 
-        mean of the magnitude of the angular velocity of the body in the
-        frequency domain
+        mean of the magnitude of the angular velocity of the body in the frequency domain
 
 "fBodyBodyGyroMag-std()"
 
-        standard deviation of the magnitude of the angular velocity of the 
-        body in the frequency domain
+        standard deviation of the magnitude of the angular velocity of the body in the frequency domain
 
 "fBodyBodyGyroJerkMag-mean()"
 
-        mean of the magnitude of the jerk angular velocity of the body in the
-        frequency domain
+        mean of the magnitude of the jerk angular velocity of the body in the frequency domain
 
 "fBodyBodyGyroJerkMag-std()"
 
-        standard deviation of the magnitude of the jerk angular velocity of 
-        the body in the frequency domain
+        standard deviation of the magnitude of the jerk angular velocity of the body in the frequency domain
 
