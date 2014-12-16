@@ -100,267 +100,267 @@ df <- read.table("tidy-data.txt", header=TRUE)
 ### Variable Descriptions (column 3)
 **Note: In the original dataset, all values were normalized to be in the range of -1 to 1 and there are no units (according to the class TA).**
 
-"tBodyAcc-mean()-X"
+"timeBodyAccMeanX"
 	
 	mean acceleration of the body in the X-axis in the time domain
 
-"tBodyAcc-mean()-Y"
+"timeBodyAccMeanY"
 	
 	mean acceleration of the body in the Y-axis in the time domain
 
-"tBodyAcc-mean()-Z"
+"timeBodyAccMeanZ"
 	
 	mean acceleration of the body in the Z-axis in the time domain
 
-"tBodyAcc-std()-X"
+"timeBodyAccStdX"
 	
 	standard deviation of the acceleration of the body in the X-axis in the time domain
 
-"tBodyAcc-std()-Y"
+"timeBodyAccStdY"
 	
 	standard deviation of the acceleration of the body in the Y-axis in the time domain
 
-"tBodyAcc-std()-Z"
+"timeBodyAccStdZ"
 	
 	standard deviation of the acceleration of the body in the Z-axis in the time domain
 
-"tGravityAcc-mean()-X"
+"timeGravityAccMeanX"
 	
 	mean acceleration due to gravity in the X-axis in the time domain
 
-"tGravityAcc-mean()-Y"
+"timeGravityAccMeanY"
 	
 	mean acceleration due to gravity in the Y-axis in the time domain
 
-"tGravityAcc-mean()-Z"
+"timeGravityAccMeanZ"
 	
 	mean acceleration due to gravity in the Z-axis in the time domain
 
-"tGravityAcc-std()-X"
+"timeGravityAccStdX"
 	
 	standard deviation of acceleration due to gravity in the X-axis in the time domain
 
-"tGravityAcc-std()-Y"
+"timeGravityAccStdY"
 	
 	standard deviation of acceleration due to gravity in the Y-axis in the time domain
 
-"tGravityAcc-std()-Z"
+"timeGravityAccStdZ"
 	
 	standard deviation of acceleration due to gravity in the Z-axis in the time domain
 
-"tBodyAccJerk-mean()-X"
+"timeBodyAccJerkMeanX"
 	
 	mean jerk acceleration of the body in the X-axis in the time domain
 
-"tBodyAccJerk-mean()-Y"
+"timeBodyAccJerkMeanY"
 	
 	mean jerk acceleration of the body in the Y-axis in the time domain
 
-"tBodyAccJerk-mean()-Z"
+"timeBodyAccJerkMeanZ"
 	
 	mean jerk acceleration of the body in the Z-axis in the time domain
 
-"tBodyAccJerk-std()-X"
+"timeBodyAccJerkStdX"
 	
 	standard deviation of jerk acceleration of the body in the X-axis in the time domain
 
-"tBodyAccJerk-std()-Y"
+"timeBodyAccJerkStdY"
 	
 	standard deviation of jerk acceleration of the body in the Y-axis in the time domain
 
-"tBodyAccJerk-std()-Z"
+"timeBodyAccJerkStdZ"
 	
 	standard deviation of jerk acceleration of the body in the Z-axis in the time domain
 
-"tBodyGyro-mean()-X"
+"timeBodyGyroMeanX"
 
 	mean angular velocity of the body in the X-axis in the time domain
 
-"tBodyGyro-mean()-Y"
+"timeBodyGyroMeanY"
 
 	mean angular velocity of the body in the Y-axis in the time domain
 
-"tBodyGyro-mean()-Z"
+"timeBodyGyroMeanZ"
 
 	mean angular velocity of the body in the Z-axis in the time domain
 
-"tBodyGyro-std()-X"
+"timeBodyGyroStdX"
 
 	standard deviation of the angular velocity of the body in the X-axis in the time domain
 
-"tBodyGyro-std()-Y"
+"timeBodyGyroStdY"
 
 	standard deviation of the angular velocity of the body in the Y-axis in the time domain
 
-"tBodyGyro-std()-Z"
+"timeBodyGyroStdZ"
 
 	standard deviation of the angular velocity of the body in the Z-axis in the time domain
 
-"tBodyGyroJerk-mean()-X"
+"timeBodyGyroJerkMeanX"
 
 	mean jerk angular velocity of the body in the X-axis in the time domain
 
-"tBodyGyroJerk-mean()-Y"
+"timeBodyGyroJerkMeanY"
 
 	mean jerk angular velocity of the body in the Y-axis in the time domain
 
-"tBodyGyroJerk-mean()-Z"
+"timeBodyGyroJerkMeanZ"
 
 	mean jerk angular velocity of the body in the Z-axis in the time domain
 
-"tBodyGyroJerk-std()-X"
+"timeBodyGyroJerkStdX"
 
 	standard deviation of the jerk angular velocity of the body in the X-axis in the time domain
 
-"tBodyGyroJerk-std()-Y"
+"timeBodyGyroJerkStdY"
 
 	standard deviation of the jerk angular velocity of the body in the Y-axis in the time domain
 
-"tBodyGyroJerk-std()-Z"
+"timeBodyGyroJerkStdZ"
 
 	standard deviation of the jerk angular velocity of the body in the Z-axis in the time domain
 
-"tBodyAccMag-mean()"
+"timeBodyAccMagMean"
 
 	mean of the magnitude of the acceleration of the body in the time domain
 
-"tBodyAccMag-std()"
+"timeBodyAccMagStd"
 
 	standard deviation of the magnitude of the acceleration of the body in the time domain
 
-"tGravityAccMag-mean()"
+"timeGravityAccMagMean"
 
 	mean of the magnitude of the acceleration of gravity in the time domain
 
-"tGravityAccMag-std()"
+"timeGravityAccMagStd"
 
 	standard deviation of the magnitude of the acceleration of gravity in the time domain
 
-"tBodyAccJerkMag-mean()"
+"timeBodyAccJerkMagMean"
 
 	mean of the magnitude of the jerk acceleration of the body in the time domain
 
-"tBodyAccJerkMag-std()"
+"timeBodyAccJerkMagStd"
 
 	standard deviation of the magnitude of the jerk acceleration of the body in the time domain
 
-"tBodyGyroMag-mean()"
+"timeBodyGyroMagMean"
 
 	mean of the magnitude of the angular velocity of the body in the time domain
 
-"tBodyGyroMag-std()"
+"timeBodyGyroMagStd"
 
 	standard deviation of the magnitude of the angular velocity of the body in the time domain
 
-"tBodyGyroJerkMag-mean()"
+"timeBodyGyroJerkMagMean"
 
 	mean of the magnitude of the jerk angular velocity of the body in the time domain
 
-"tBodyGyroJerkMag-std()"
+"timeBodyGyroJerkMagStd"
 
 	standard deviation of the magnitude of the jerk angular velocity of the body in the time domain
 
-"fBodyAcc-mean()-X"
+"freqBodyAccMeanX"
        
         mean acceleration of the body in the X-axis in the frequency domain
 
-"fBodyAcc-mean()-Y"
+"freqBodyAccMeanY"
        
         mean acceleration of the body in the Y-axis in the frequency domain
 
-"fBodyAcc-mean()-Z"
+"freqBodyAccMeanZ"
        
         mean acceleration of the body in the Z-axis in the frequency domain
 
-"fBodyAcc-std()-X"
+"freqBodyAccStdX"
        
         standard deviation of the acceleration of the body in the X-axis in the frequency domain
 
-"fBodyAcc-std()-Y"
+"freqBodyAccStdY"
        
         standard deviation of the acceleration of the body in the Y-axis in the frequency domain
 
-"fBodyAcc-std()-Z"
+"freqBodyAccStdZ"
        
         standard deviation of the acceleration of the body in the Z-axis in the frequency domain
 
-"fBodyAccJerk-mean()-X"
+"freqBodyAccJerkMeanX"
        
         mean jerk acceleration of the body in the X-axis in the frequency domain
 
-"fBodyAccJerk-mean()-Y"
+"freqBodyAccJerkMeanY"
        
         mean jerk acceleration of the body in the Y-axis in the frequency domain
 
-"fBodyAccJerk-mean()-Z"
+"freqBodyAccJerkMeanZ"
        
         mean jerk acceleration of the body in the Z-axis in the frequency domain
 
-"fBodyAccJerk-std()-X"
+"freqBodyAccJerkStdX"
         
         standard deviation of jerk acceleration of the body in the X-axis in the frequency domain
 
-"fBodyAccJerk-std()-Y"
+"freqBodyAccJerkStdY"
         
         standard deviation of jerk acceleration of the body in the Y-axis in the frequency domain
 
-"fBodyAccJerk-std()-Z"
+"freqBodyAccJerkStdZ"
         
         standard deviation of jerk acceleration of the body in the Z-axis in the frequency domain
 
-"fBodyGyro-mean()-X"
+"freqBodyGyroMeanX"
 
         mean angular velocity of the body in the X-axis in the frequency domain
 
-"fBodyGyro-mean()-Y"
+"freqBodyGyroMeanY"
 
         mean angular velocity of the body in the Y-axis in the frequency domain
 
-"fBodyGyro-mean()-Z"
+"freqBodyGyroMeanZ"
 
         mean angular velocity of the body in the Z-axis in the frequency domain
 
-"fBodyGyro-std()-X"
+"freqBodyGyroStdX"
 
         standard deviation of the angular velocity of the body in the X-axis in the frequency domain
 
-"fBodyGyro-std()-Y"
+"freqBodyGyroStdY"
 
         standard deviation of the angular velocity of the body in the Y-axis in the frequency domain
 
-"fBodyGyro-std()-Z"
+"freqBodyGyroStdZ"
 
         standard deviation of the angular velocity of the body in the Z-axis in the frequency domain
 
-"fBodyAccMag-mean()"
+"freqBodyAccMagMean"
 
         mean of the magnitude of the acceleration of the body in the frequency domain
 
-"fBodyAccMag-std()"
+"freqBodyAccMagStd"
 
         standard deviation of the magnitude of the acceleration of the body in the frequency domain
 
-"fBodyBodyAccJerkMag-mean()"
+"freqBodyBodyAccJerkMagMean"
 
         mean of the magnitude of the jerk acceleration of the body in the frequency domain
 
-"fBodyBodyAccJerkMag-std()"
+"freqBodyBodyAccJerkMagStd"
 
         standard deviation of the magnitude of the jerk acceleration of the body in the frequency domain
 
-"fBodyBodyGyroMag-mean()"
+"freqBodyBodyGyroMagMean"
 
         mean of the magnitude of the angular velocity of the body in the frequency domain
 
-"fBodyBodyGyroMag-std()"
+"freqBodyBodyGyroMagStd"
 
         standard deviation of the magnitude of the angular velocity of the body in the frequency domain
 
-"fBodyBodyGyroJerkMag-mean()"
+"freqBodyBodyGyroJerkMagMean"
 
         mean of the magnitude of the jerk angular velocity of the body in the frequency domain
 
-"fBodyBodyGyroJerkMag-std()"
+"freqBodyBodyGyroJerkMagStd"
 
         standard deviation of the magnitude of the jerk angular velocity of the body in the frequency domain
 
