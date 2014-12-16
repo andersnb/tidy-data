@@ -55,12 +55,12 @@ Below are the steps that were used to read and transform the original data.
 10. Only the mean and standard deviation variables were kept from the 
     combined data frame.  I chose the variables that had the word "mean"
     in them and that also had an associated standard deviation plus the
-    standard deviation values themselves.
+    standard deviation variables themselves.
     
 11. Next, the activity ids were replaced with their character labels using
     the R *sub* function.
 
-12. Then, the column/variable names were renamed to be more descriptive.
+12. Then, the column/variable names were renamed to be more descriptive and to remove characters that can be problematic when using the in R (e.g., parentheses, and underscores). However, I did keep and add some capital letters since I think they improve readability of variable names.
 
 13. Next, the data was reshaped by melting the variables into two columns
     (the variable name and the variable value) to create a long tidy data
