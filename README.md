@@ -1,7 +1,9 @@
 
-#		README for Wearable Computing Dataset
+#		README for Tidy Data Project
 Bill Anderson
 15Dec2014
+
+This README describes the repository for the tidy version of the *Human Activity Recognition Using Smartphones Dataset*.  This version of the dataset was created for the *Coursera Getting and Cleaning Data* class taught by professors at The Johns Hopkins University.
 
 ## Origin of Data
 
@@ -28,7 +30,7 @@ This dataset is distributed AS-IS and no responsibility implied or explicit can 
 Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012.
 
 ## Data Ingest and Transformations
-Below are the steps that were used to read and transform the raw data.
+The file **run_analysis.R** in this repository can be used to generate the tidy dataset from the raw dataset. Below are the steps that the script takes to read and transform the raw data.
 
 1. The test data values (contained in "test/X_test.txt") were read in.
 
@@ -71,6 +73,8 @@ Below are the steps that were used to read and transform the raw data.
     using the *summarize* function.
 
 15. Finally, the data was written out using the *write.table* function.
+
+
     
 ## Reading in the Data
 The following R command can be used to read in the tidy dataset to a data frame:
