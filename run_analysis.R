@@ -110,6 +110,7 @@ dfGrouped <- group_by(dfMeanStdTbl, subject, activity, variable)
 # we would expect since there are 30 subjects x 6 activities x 66 variables
 #
 dfSummary <- summarize(dfGrouped, mean(value))
+names(dfSummary) <- c("subject", "activity", "variable", "mean")
 
 #
 # write out the final dataset
