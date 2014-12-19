@@ -74,7 +74,7 @@ dfMeanStd <- dfAll[, c("subject", "activity", "V1", "V2", "V3", "V4", "V5", "V6"
 #
 # replace activity numbers with strings
 #
-activityLabels <- read.table("/Users/andersnb/Downloads/coursera/UCI HAR Dataset/activity_labels.txt", stringsAsFactors=FALSE)
+activityLabels <- read.table("./UCI HAR Dataset/activity_labels.txt", stringsAsFactors=FALSE)
 for (i in 1:nrow(activityLabels)) {
     dfMeanStd$activity <- sub(activityLabels$V1[i], activityLabels$V2[i], 
                                 dfMeanStd$activity)
