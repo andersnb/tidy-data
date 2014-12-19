@@ -29,7 +29,7 @@ This dataset is distributed AS-IS and no responsibility implied or explicit can 
 
 Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012.
 
-## Data Ingest and Transformations
+## Data Ingest and Transformations and Description of How the **run_analysis.R** Script Works
 The file **run_analysis.R** in this repository can be used to generate the tidy dataset from the raw dataset. Below are the steps that the script takes to read and transform the raw data.
 
 1. The test data values (contained in "test/X_test.txt") were read in.
@@ -73,7 +73,6 @@ The file **run_analysis.R** in this repository can be used to generate the tidy 
     using the *summarize* function.
 
 15. Finally, the data was written out using the *write.table* function.
-
 
     
 ## Reading in the Data
