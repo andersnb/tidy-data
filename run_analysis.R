@@ -3,6 +3,7 @@
 #
 # modification history
 # 11Dec2014  Bill Anderson  created
+# 19Dec2014  Bill Anderson  updated
 #
 # to read in data created by this script:
 # df <- read.table("tidy-data.txt", header=TRUE)
